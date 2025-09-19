@@ -49,7 +49,6 @@
 
 ### 🏪 **MARKETPLACE & ID GAMER**
 - 🆔 **Jual Beli ID Game** - Akun game dengan level tinggi
-- 💬 **Live Chat** - Negosiasi real-time dengan pembeli
 - ⭐ **Rating & Review** - Sistem kepercayaan antar user
 
 ---
@@ -68,7 +67,6 @@
 
 ### 👥 **Fitur Pengguna**
 - ✅ **Posting ID Gamer** - Jual ID game dengan mudah
-- ✅ **Live Chat Real-time** - Diskusi langsung dengan pembeli
 - ✅ **Order Game Top up** - Beli top up dengan cepat
 - ✅ **Order Gift Card** - Pesan gift card favorit
 - ✅ **Order Voucher Code** - Dapatkan kode voucher instan
@@ -113,19 +111,22 @@ git clone https://github.com/JonathanZefanya/TopUp.git
 cd TopUp
 ```
 
-### 2️⃣ **Install Dependencies**
+### 2️⃣ **Unzip**
 ```bash
-composer install
-npm install
+Extract Script.zip
 ```
 
-### 3️⃣ **Setup Environment**
+### 3️⃣ **Setup Database di .env**
 ```bash
-cp .env.example .env
-php artisan key:generate
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=<Your Database>
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
-### 4️⃣ **Database Setup**
+### 4️⃣ **Database Setup di MySQL**
 ```bash
 # Import database
 mysql -u username -p database_name < client_sanitized.sql
@@ -144,7 +145,7 @@ FLUTTERWAVE_ENCRYPTION_KEY=your_encryption_key
 
 ### 6️⃣ **Start Development Server**
 ```bash
-php artisan serve
+php -S localhost:8000
 ```
 
 ---
@@ -158,19 +159,6 @@ php artisan serve
 - 🚫 Jangan commit file `.env` ke repository
 - 🔄 Regenerate API keys secara berkala
 - 📋 Gunakan sistem config Laravel untuk data sensitif
-
----
-
-## 📸 Screenshot
-
-### 🏠 **Halaman Utama**
-![Homepage](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Gamify+Homepage)
-
-### 🎮 **Halaman Top Up Game**
-![Game Top Up](https://via.placeholder.com/800x400/10b981/ffffff?text=Game+Top+Up+Page)
-
-### 🛒 **Halaman Marketplace**
-![Marketplace](https://via.placeholder.com/800x400/f59e0b/ffffff?text=Gamer+ID+Marketplace)
 
 ---
 
