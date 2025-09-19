@@ -1,1 +1,38 @@
 /Script
+
+# Large files
+Script.zip
+*.zip
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Node modules
+node_modules/
+
+# Vendor directory
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Laravel specific
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+bootstrap/cache/
+
+# Firebase service files
+*firebase*.json
+main-cedar-*.json
