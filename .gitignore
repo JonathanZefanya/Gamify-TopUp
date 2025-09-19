@@ -1,8 +1,8 @@
 /Script
 
-# Large files
-Script.zip
-*.zip
+# Large files (now handled by Git LFS)
+# Script.zip - tracked by LFS
+# *.zip - tracked by LFS
 
 # Log files
 *.log
