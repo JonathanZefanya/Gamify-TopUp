@@ -183,17 +183,6 @@ Kami menyambut kontribusi dari developer Indonesia!
 
 ---
 
-## 📞 Dukungan
-
-Butuh bantuan? Hubungi kami!
-
-- 📧 **Email**: support@gamify.com
-- 💬 **Discord**: [Join Server](https://discord.gg/gamify)
-- 📱 **WhatsApp**: +62 xxx-xxxx-xxxx
-- 🐦 **Twitter**: [@GamifyID](https://twitter.com/gamifyid)
-
----
-
 ## 📊 Statistik Project
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/JonathanZefanya/TopUp)
