@@ -124,7 +124,7 @@ cd TopUp
 
 ### 2️⃣ **Unzip**
 ```bash
-Extract Script.zip
+Extract here Script.zip
 ```
 
 ### 3️⃣ **Setup Database di .env**
@@ -141,9 +141,6 @@ DB_PASSWORD=
 ```bash
 # Import database
 mysql -u username -p database_name < client_sanitized.sql
-
-# Run migrations
-php artisan migrate
 ```
 
 ### 5️⃣ **Configure API Keys**
@@ -194,20 +191,6 @@ Butuh bantuan? Hubungi kami!
 - 💬 **Discord**: [Join Server](https://discord.gg/gamify)
 - 📱 **WhatsApp**: +62 xxx-xxxx-xxxx
 - 🐦 **Twitter**: [@GamifyID](https://twitter.com/gamifyid)
-
----
-
-## 🌟 Roadmap
-
-### 🎯 **Q4 2025**
-- [ ] 🎮 Integrasi dengan 50+ game populer
-- [ ] 💳 Payment gateway lokal (OVO, DANA, GoPay)
-- [ ] 📱 Mobile app untuk Android & iOS
-
-### 🎯 **Q1 2026**
-- [ ] 🤖 AI-powered recommendation system
-- [ ] 🏆 Sistem loyalty dan rewards
-- [ ] 🌐 Multi-language support
 
 ---
 
