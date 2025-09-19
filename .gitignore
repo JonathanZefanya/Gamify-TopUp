@@ -1,1 +1,56 @@
 /Script
+
+# Database files with sensitive data
+DataBase/
+*.sql
+*.db
+*.sqlite
+
+# Large files (now handled by Git LFS)
+# Script.zip - tracked by LFS
+# *.zip - tracked by LFS
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# API Keys and sensitive configuration
+**/config/database.php
+**/config/services.php
+firebase-service.json
+main-cedar-*.json
+
+# Node modules
+node_modules/
+
+# Vendor directory
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Laravel specific
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+bootstrap/cache/
+
+# Firebase service files
+*firebase*.json
+main-cedar-*.json
+
+# Backup files
+*.bak
+*.backup
+*.dump
