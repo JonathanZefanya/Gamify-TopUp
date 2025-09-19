@@ -17,7 +17,18 @@
 
 **Gamify** adalah platform digital lengkap yang memungkinkan gamer untuk membeli top up game, voucher, dan kartu virtual menggunakan mata uang lokal. Platform ini dirancang khusus untuk gamer profesional yang tidak memiliki kartu internasional namun tetap ingin menikmati berbagai layanan gaming digital.
 
-### 🎯 Solusi untuk Gamer Indonesia
+### � **Project Mata Kuliah Sistem Informasi**
+Project ini merupakan tugas kelompok untuk mata kuliah **Sistem Informasi** dengan fokus pada pengembangan aplikasi web yang menerapkan konsep-konsep sistem informasi modern dalam bidang gaming dan e-commerce.
+
+### 👥 **Tim Pengembang**
+| No | Nama | Role |
+|----|------|------|
+| 1 | **Alya** | 🎨 UI/UX Designer & Frontend Developer |
+| 2 | **Natan** | 🗄️ Database Administrator & Backend Developer |
+| 3 | **Kekez** | 🔧 System Analyst & Quality Assurance |
+| 4 | **Jonathan** | 👨‍💻 Full Stack Developer & Project Manager |
+
+### �🎯 Solusi untuk Gamer Indonesia
 - 💳 **Tanpa Kartu Internasional** - Bayar dengan mata uang lokal
 - 🚀 **Proses Cepat** - Top up instan dan otomatis
 - 🛡️ **Aman & Terpercaya** - Transaksi terenkripsi
@@ -209,6 +220,30 @@ Butuh bantuan? Hubungi kami!
 
 ---
 
+## 🎓 Informasi Akademik
+
+### 📚 **Detail Project**
+- **Mata Kuliah**: Sistem Informasi
+- **Jenis**: Project Kelompok
+- **Semester**: Ganjil 2025/2026
+- **Fokus**: Pengembangan Sistem Informasi E-Commerce Gaming
+
+### 🏆 **Tujuan Pembelajaran**
+- ✅ Menerapkan konsep **Sistem Informasi** dalam dunia nyata
+- ✅ Mengimplementasikan **Database Management System**
+- ✅ Memahami **Software Development Life Cycle (SDLC)**
+- ✅ Praktik **Team Collaboration** dalam pengembangan software
+- ✅ Menguasai **Web Development** dengan framework modern
+
+### 📝 **Metodologi Pengembangan**
+- 🔄 **Agile Development** - Iterative dan collaborative
+- 🗃️ **MVC Architecture** - Model-View-Controller pattern
+- 🗄️ **Relational Database** - Normalized database design
+- 🔐 **Security First** - Implementasi best practices keamanan
+- 📱 **Responsive Design** - Mobile-first approach
+
+---
+
 ## 📄 Lisensi
 
 Project ini dilisensikan under MIT License - lihat file [LICENSE](LICENSE) untuk detail.
@@ -219,9 +254,18 @@ Project ini dilisensikan under MIT License - lihat file [LICENSE](LICENSE) untuk
 
 **🎮 Dibuat dengan ❤️ untuk Gamer Indonesia 🇮🇩**
 
+**🎓 Project Mata Kuliah Sistem Informasi - Tim Gamify 🎓**
+
 [![GitHub Stars](https://img.shields.io/github/stars/JonathanZefanya/TopUp?style=social)](https://github.com/JonathanZefanya/TopUp/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/JonathanZefanya/TopUp?style=social)](https://github.com/JonathanZefanya/TopUp/network/members)
 
 **⭐ Jika project ini bermanfaat, jangan lupa kasih star ya! ⭐**
+
+---
+
+### 👥 **Tim Gamify**
+**Alya** • **Natan** • **Kekez** • **Jonathan**
+
+*"Mengubah cara gamer Indonesia menikmati dunia gaming digital"*
 
 </div>
