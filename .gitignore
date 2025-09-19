@@ -3,6 +3,7 @@
 # Database files with sensitive data
 DataBase/
 *.sql
+!client_sanitized.sql
 *.db
 *.sqlite
 
