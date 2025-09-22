@@ -1,0 +1,156 @@
+@extends($extends)
+@section('title')
+    {{ __('Pay with ').__(optional($deposit->gateway)->name) }}
+@endsection
+@section('content')
+    @php
+        $containerClass = (str_ends_with($extends, 'user') && auth()->user()->active_dashboard == 'daybreak')
+            ? 'container'
+            : (str_ends_with($extends, 'user') ? '' : 'main-content');
+    @endphp
+    <div class="{{ $containerClass }}">
+        @if(str_ends_with($extends, 'user') && auth()->user()->active_dashboard == 'daybreak')
+            <div class="pagetitle mt-20">
+                <h4 class="mb-1">{{ optional($deposit->gateway)->name }}</h4>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}">@lang('Home')</a></li>
+                        <li class="breadcrumb-item active">{{ optional($deposit->gateway)->name }}</li>
+                    </ol>
+                </nav>
+            </div>
+        @elseif(str_ends_with($extends, 'user') && auth()->user()->active_dashboard == 'nightfall')
+            <div class="pagetitle">
+                <h3 class="mb-1">{{ optional($deposit->gateway)->name }}</h3>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}">@lang('Home')</a></li>
+                        <li class="breadcrumb-item active">{{ optional($deposit->gateway)->name }}</li>
+                    </ol>
+                </nav>
+            </div>
+        @endif
+        <section class="section">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card card-primary shadow">
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <img
+                                        src="{{ getFile(optional($deposit->gateway)->driver, optional($deposit->gateway)->image) }}"
+                                        class="card-img-top gateway-img">
+                                </div>
+                                <div class="col-md-6">
+                                    <form role="form" id="payment-form" method="{{$data->method}}"
+                                          action="{{$data->url}}">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><strong>@lang("CARD NAME")</strong></label>
+                                                <div class="input-group input-box">
+                                                    <input type="text" class="form-control white" name="name"
+                                                           placeholder="Card Name" autocomplete="off" required>
+                                                    <span class="input-group-addon modal-input-addon"></span>
+
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text py-2"><i
+                                                                class="fa fa-font"></i></span>
+                                                    </div>
+                                                </div>
+
+                                                @error('name')<span
+                                                    class="text-danger  mt-1">{{ $message }}</span>@enderror
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label><strong>@lang("CARD NUMBER")</strong></label>
+                                                <div class="input-group input-box">
+                                                    <input type="tel" class="form-control white" name="cardNumber"
+                                                           placeholder="Valid Card Number" autocomplete="off" autofocus
+                                                           required>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text py-2">
+                                                          <i class="fa fa-credit-card"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                @error('cardNumber')<span
+                                                    class="text-danger  mt-1">{{ $message }}</span>@enderror
+                                            </div>
+
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><strong>@lang("EXPIRATION DATE")</strong></label>
+                                                <div class="input-box">
+                                                    <input
+                                                        type="tel"
+                                                        class="form-control"
+                                                        name="cardExpiry"
+                                                        placeholder="MM / YYYY"
+                                                        autocomplete="off"
+                                                        required/>
+                                                </div>
+
+
+                                                @error('cardExpiry')<span
+                                                    class="text-danger  mt-1">{{ $message }}</span>@enderror
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <label><strong>@lang("CVC CODE")</strong></label>
+                                                <div class="input-box">
+                                                    <input
+                                                        type="tel"
+                                                        class="form-control"
+                                                        name="cardCVC"
+                                                        placeholder="CVC"
+                                                        autocomplete="off"
+                                                        required/>
+                                                </div>
+                                                @error('cardCVC')<span
+                                                    class="text-danger  mt-1">{{ $message }}</span>@enderror
+
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <input class="cmn-btn" type="submit" value="PAY NOW">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+@endsection
+@push('style')
+    <style>
+        .main-content{
+            background: var(--bg-color1);
+        }
+    </style>
+@endpush
+
+@push('script')
+    <script type="text/javascript" src="https://rawgit.com/jessepollak/card/master/dist/card.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                var card = new Card({
+                    form: '#payment-form',
+                    container: '.card-wrapper',
+                    formSelectors: {
+                        numberInput: 'input[name="cardNumber"]',
+                        expiryInput: 'input[name="cardExpiry"]',
+                        cvcInput: 'input[name="cardCVC"]',
+                        nameInput: 'input[name="name"]'
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+@endpush

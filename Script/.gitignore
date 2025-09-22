@@ -1,0 +1,11 @@
+.env
+.idea
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.phpunit.result.cache
+/.vscode
+/storage/logs
+/assets/uploads/googleTranslateCredential
